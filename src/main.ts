@@ -11,7 +11,7 @@ const app: Express = express();
 const API_PORT = process.env.API_PORT || 4000;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({origin: 'https://syllabus-neu.vercel.app/'}));
 
 app.use('/api', S3Router);
 app.use('/api', DynamoRouter);
