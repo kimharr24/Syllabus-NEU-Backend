@@ -35,8 +35,8 @@ const DynamoRouter_1 = __importDefault(require("./routes/DynamoRouter"));
 dotenv.config();
 const app = (0, express_1.default)();
 const API_PORT = process.env.API_PORT || 4000;
+app.use((0, cors_1.default)());
 app.use(express_1.default.json());
-app.use((0, cors_1.default)({ origin: 'https://syllabus-neu.vercel.app/' }));
 app.use('/api', S3Router_1.default);
 app.use('/api', DynamoRouter_1.default);
 app.listen(API_PORT, () => {
