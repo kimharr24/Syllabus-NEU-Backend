@@ -34,7 +34,7 @@ router.get('/s3/objects/unsignedURL/:id', (req, res) => __awaiter(void 0, void 0
         Key: id,
     };
     const command = new client_s3_1.GetObjectCommand(params);
-    const url = yield (0, s3_request_presigner_1.getSignedUrl)(s3, command, { expiresIn: 300 });
+    const url = yield (0, s3_request_presigner_1.getSignedUrl)(s3, command, { expiresIn: 3600 });
     res.send(url);
 }));
 router.post('/s3/objects', mountPDF_1.default, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
