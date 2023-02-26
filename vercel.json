@@ -8,8 +8,7 @@
         }
     ],
     "rewrites": [
-        { "source": "/(.*)", "destination": "dist/main.js" },
-        { "source": "/:any", "destination": "/"}
+        { "source": "/(.*)", "destination": "dist/main.js" }
     ],
     "headers": [
         {
