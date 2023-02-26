@@ -9,7 +9,7 @@
     ],
     "rewrites": [
         { "source": "/(.*)", "destination": "dist/main.js" },
-        { "source": "/search/:semester/:searchQuery", "destination": "dist/main.js"}
+        { "source": "/:any", "destination": "/"}
     ],
     "headers": [
         {
